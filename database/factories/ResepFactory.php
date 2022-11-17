@@ -17,11 +17,12 @@ class ResepFactory extends Factory
     public function definition()
     {
         return [
-            'judul' => $this->faker->sentence(mt_rand(2,8)),
+            'judul' => $this->faker->sentence(mt_rand(2,5)),
             'deskripsi' => $this->faker->paragraph(),
             'bahan' => $this->faker->paragraph(),
             'pembuatan' => $this->faker->paragraph(),
             'gambar' => $this->faker->word().'.jpg',
+            'user_id' => 1
         ];
     }
 }

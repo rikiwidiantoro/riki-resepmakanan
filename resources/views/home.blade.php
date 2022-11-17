@@ -29,16 +29,16 @@
     </div>
     <div class="row">
         @foreach($reseps as $resep)
-        <div class="col-lg-4 mb-5">
+        <div class="col-lg-4 col-md-6 mb-5">
             <div class="card bg-light" style="border: none;">
-                <img src="gambar.jpg" class="card-img-top" alt="gambar.jpg">
+                <img src="{{ $resep->gambar }}" class="card-img-top" alt="{{ $resep->gambar }}">
                 <div class="card-body">
                     <span style="color: gray"><em>2 orang menyukai ini</em></span>
                     <h5 class="card-title">
                         <a href="/detail/{{ $resep->id }}" class="text-decoration-none">{{ $resep->judul }}</a>
                     </h5>
                     <p class="card-text">{{ $resep->deskripsi }}</p>
-                    <a href="#" class="btn suka" style="width: 100%; background-color: rgb(194,201,205);">Suka</a>
+                    <a class="btn suka tdksuka" style="width: 100%;">Suka</a>
                 </div>
             </div>
         </div>

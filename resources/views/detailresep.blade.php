@@ -7,6 +7,7 @@
         <div class="col-lg-8">
           <img src="{{ $resep->gambar }}" class="card-img-top" alt="{{ $resep->gambar }}">
           <h1>{{ $resep->judul }}</h1>
+          <p>Penulis Resep : <em>{{ $resep->author->name }}</em></p>
           <p>{{ $resep->deskripsi }}</p>
           <h3>Bahan-bahan :</h3>
           <ul>

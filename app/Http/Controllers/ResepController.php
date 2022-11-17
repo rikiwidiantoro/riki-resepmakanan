@@ -10,7 +10,6 @@ class ResepController extends Controller
     public function create() {
         return view('tambahresep',[
             'title' => 'Tambah Resep'
-            // 'reseps' => Resep::all()
         ]);
     }
 

@@ -1,3 +1,32 @@
+## Cara Installasi
+
+1. Download Code di repository ini dan code di link drive ini : ....
+2. Extract semua. Lalu gabungkan code drive dengan code di repository
+3. Buat database sesuai nama di file .sql lalu import file .sql yang sebelumnya yg ada di drive
+4. Buka Code, lalu buka terminal dan jalankan perintah "php artisan migrate", kemudian jalankan perintah "php artisan db:seed"
+
+
+## Cara Running
+
+- Jika menggunakan valet : jalankan "npm run dev" pada terminal, lalu klik nama repository "riki-resepmakanan.test"
+- Tanpa menggunakan valet : buka 2 terminal lalu jalankan "npm run dev" pada terminal 1, dan jalankan "npm run serve" pada terminal 2 atau sebaliknya
+- User default : nama = Riki Widiantoro, email = qwerty@aa.com, password = qwertyuiop | atau bisa dilihat pada code di file database/seeders/DatabaseSeeder.php
+
+
+## Fitur yang belum selesai
+1. User yang sudah login bisa meng-klik tombol suka pada resep, akan tetapi tidak berpengaruh pada jumlah suka (tag suka diatas judul) dan jika di refresh atau berpindah halaman kembali seperti semula. jadi tombol suka hanya fungsionalitas saja dihalaman home
+2. Belum bisa Tambah data
+
+
+## Dibuat dengan :
+- Framework Laravel & Bootstrap
+- PHP, JavaScript, MySQL
+- Fitur otentikasi Laravel UI
+- Fitur Seeding & Factory Laravel
+- XAMPP, VS Code, Chrome
+
+
+
 ## Tes Teknis Fullstack Meta Mata Internship Challenge From Home Batch 4
 
 Membuat website dengan Tema : Website untuk berbagi resep makanan.
@@ -28,22 +57,3 @@ Penilaian :
 - Kesesuaian Dengan desain
 - Responsive Layout
 - Fungsionalitas
-
-
-## Cara Instalasi
-
-1. Download Code di repository ini dan code di link drive ini : ....
-2. Extract semua. Lalu gabungkan code drive dengan code di repository
-3. Buat database sesuai nama di file .sql lalu import file .sql yang sebelumnya yg ada di drive
-
-
-## Cara Running
-
-- Jika menggunakan valet : jalankan "npm run dev" pada terminal, lalu klik nama repository "riki-resepmakanan.test"
-- Tanpa menggunakan valet : buka 2 terminal lalu jalankan "npm run dev" pada terminal 1, dan jalankan "npm run serve" pada terminal 2 atau sebaliknya
-
-
-## Fitur yang belum selesai
-1. User yang sudah login bisa meng-klik tombol suka pada resep
-
-

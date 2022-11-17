@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('judul');
+            $table->foreignId('user_id');
             $table->text('deskripsi');
             $table->text('bahan');
             $table->text('pembuatan');

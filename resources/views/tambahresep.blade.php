@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app_name', 'Tulis Resep') }}</title>
+    <title>{{ $title }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -71,13 +71,38 @@
 
         <main class="py-4">
           <div class="container">  
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-3">
                 <div class="col-lg-8">
                     <h2>Tulis Resepmu ...</h2>
                 </div>
             </div>
-            <div class="row">
-              <div class="col-lg-12">
+            <div class="row justify-content-center mb-5">
+              <div class="col-lg-8">
+                
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><h5>Judul</h5></label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><h5>Deskripsi</h5></label>
+                        <textarea name="" class="form-control" id="exampleInputEmail1" id="" cols="10" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><h5>Bahan - bahan</h5></label>
+                        <textarea name="" class="form-control" id="exampleInputEmail1" id="" cols="10" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><h5>Langkah Pembuatan</h5></label>
+                        <textarea name="" class="form-control" id="exampleInputEmail1" id="" cols="10" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"><h5>Upload Foto Masakan</h5></label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        {{-- <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> --}}
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="background-color: rgb(84,119,148); width: 100%;">Terbitkan Resep</button>
+                </form>
 
               </div>
             </div>

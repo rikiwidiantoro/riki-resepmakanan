@@ -13,6 +13,12 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <style>
+        .card-body .tdksuka {
+            background-color: rgb(194,201,205);
+        }
+    </style>
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -85,4 +91,15 @@
     </div>
 
 </body>
+
+    <script>
+        let tombol = document.querySelectorAll(".suka");
+
+        tombol.forEach(function(button) {
+            button.addEventListener('click', function() {
+                button.classList.toggle('btn-primary');
+                button.classList.toggle('tdksuka');
+            });
+        });
+    </script>
 </html>
