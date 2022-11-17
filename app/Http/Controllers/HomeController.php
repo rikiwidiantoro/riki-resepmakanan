@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Resep;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home', [
+            'title' => 'Home',
+            'reseps' => Resep::latest()->get() // data terakhir yg dimasukan akan berada di atas
+        ]);
     }
 }

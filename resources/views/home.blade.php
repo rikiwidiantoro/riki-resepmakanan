@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
-@section('content')
+@section('isi')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -27,51 +27,22 @@
             <h5>Resep Terbaru</h5>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-lg-4">
+    <div class="row">
+        @foreach($reseps as $resep)
+        <div class="col-lg-4 mb-5">
             <div class="card bg-light" style="border: none;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="gambar.jpg" class="card-img-top" alt="gambar.jpg">
                 <div class="card-body">
                     <span style="color: gray"><em>2 orang menyukai ini</em></span>
-                    <h5 class="card-title">Sambal Jamur ala SS</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn" style="width: 100%; background-color: rgb(194,201,205);">Suka</a>
+                    <h5 class="card-title">
+                        <a href="/detail/{{ $resep->id }}" class="text-decoration-none">{{ $resep->judul }}</a>
+                    </h5>
+                    <p class="card-text">{{ $resep->deskripsi }}</p>
+                    <a href="#" class="btn suka" style="width: 100%; background-color: rgb(194,201,205);">Suka</a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4">
-            <div class="card bg-light" style="border: none;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <span style="color: gray"><em>2 orang menyukai ini</em></span>
-                    <h5 class="card-title">Sambal Jamur ala SS</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn" style="width: 100%; background-color: rgb(194,201,205);">Suka</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card bg-light" style="border: none;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <span style="color: gray"><em>2 orang menyukai ini</em></span>
-                    <h5 class="card-title">Sambal Jamur ala SS</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn" style="width: 100%; background-color: rgb(194,201,205);">Suka</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card bg-light" style="border: none;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <span style="color: gray"><em>2 orang menyukai ini</em></span>
-                    <h5 class="card-title">Sambal Jamur ala SS</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn" style="width: 100%; background-color: rgb(194,201,205);">Suka</a>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
     
 </div>

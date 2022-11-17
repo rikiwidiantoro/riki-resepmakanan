@@ -25,3 +25,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/tulisresep', [App\Http\Controllers\ResepController::class, 'create']);
+Route::get('/detail/{reseps:id}', [App\Http\Controllers\ResepController::class, 'show']);
