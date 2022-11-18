@@ -55,7 +55,7 @@
                                 </li>
                             @endif
                         @else
-                            <a class="nav-link mx-3" href="/tulisresep" style="color: white">Tulis Resep</a>
+                            <a class="nav-link mx-3" href="/tulisresep/{{ Auth::user()->id }}" style="color: white">Tulis Resep</a>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" style="color: white" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

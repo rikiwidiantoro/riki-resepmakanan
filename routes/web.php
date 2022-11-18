@@ -24,5 +24,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/tulisresep', [App\Http\Controllers\ResepController::class, 'create']);
-Route::get('/detail/{reseps:id}', [App\Http\Controllers\ResepController::class, 'show']);
+Route::get('/tulisresep/{users:id}', [ResepController::class, 'create']);
+Route::post('/tulisresep/store', [ResepController::class, 'store']);
+
+Route::get('/detail/{reseps:id}', [ResepController::class, 'show']);

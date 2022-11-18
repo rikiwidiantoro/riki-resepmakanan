@@ -77,34 +77,45 @@
                 </div>
             </div>
             <div class="row justify-content-center mb-5">
-              <div class="col-lg-8">
+                <div class="col-lg-8">
                 
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"><h5>Judul</h5></label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"><h5>Deskripsi</h5></label>
-                        <textarea name="" class="form-control" id="exampleInputEmail1" id="" cols="10" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"><h5>Bahan - bahan</h5></label>
-                        <textarea name="" class="form-control" id="exampleInputEmail1" id="" cols="10" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"><h5>Langkah Pembuatan</h5></label>
-                        <textarea name="" class="form-control" id="exampleInputEmail1" id="" cols="10" rows="3"></textarea>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"><h5>Upload Foto Masakan</h5></label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        {{-- <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> --}}
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="background-color: rgb(84,119,148); width: 100%;">Terbitkan Resep</button>
-                </form>
+                    <form action="/tulisresep/store" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="judul" class="form-label"><h5>Judul</h5></label>
+                            <input type="text" class="form-control" id="judul" name="judul">
+                        </div>
+                        <div class="mb-3">
+                            <label for="deskripsi" class="form-label"><h5>Deskripsi</h5></label>
+                            <textarea name="deskripsi" class="form-control" id="deskripsi" id="" cols="10" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bahan" class="form-label"><h5>Bahan - bahan</h5></label>
+                            <textarea name="bahan" class="form-control" id="bahan" id="" cols="10" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pembuatan" class="form-label"><h5>Langkah Pembuatan</h5></label>
+                            <textarea name="pembuatan" class="form-control" id="pembuatan" id="" cols="10" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="gambar" class="form-label"><h5>Upload Foto Masakan</h5></label>
+                            <input type="text" class="form-control" id="gambar" name="gambar" placeholder="gambar.jpg">
+                            {{-- <input type="file" class="form-control" id="gambar" aria-describedby="emailHelp"> --}}
+                        </div>
+                        {{-- <fieldset disabled> --}}
+                            <div class="mb-3 d-none">
+                                <label for="user" class="form-label"><h5>Penulis</h5></label>
+                                <input type="text" class="form-control" id="user" name="user_id" value="{{ $user->id }}">
+                                {{-- <select class="form-select">
+                                    <option selected>Penulis...</option>
+                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                </select> --}}
+                            </div>
+                        {{-- </fieldset> --}}
+                        <button type="submit" name="submit" class="btn btn-primary" style="background-color: rgb(84,119,148); width: 100%;">Terbitkan Resep</button>
+                    </form>
 
-              </div>
+                </div>
             </div>
           </div>
         </main>
