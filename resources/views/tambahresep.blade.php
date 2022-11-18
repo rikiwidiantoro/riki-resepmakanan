@@ -102,16 +102,10 @@
                             <input type="text" class="form-control" id="gambar" name="gambar" placeholder="gambar.jpg">
                             {{-- <input type="file" class="form-control" id="gambar" aria-describedby="emailHelp"> --}}
                         </div>
-                        {{-- <fieldset disabled> --}}
                             <div class="mb-3 d-none">
                                 <label for="user" class="form-label"><h5>Penulis</h5></label>
                                 <input type="text" class="form-control" id="user" name="user_id" value="{{ $user->id }}">
-                                {{-- <select class="form-select">
-                                    <option selected>Penulis...</option>
-                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
-                                </select> --}}
                             </div>
-                        {{-- </fieldset> --}}
                         <button type="submit" name="submit" class="btn btn-primary" style="background-color: rgb(84,119,148); width: 100%;">Terbitkan Resep</button>
                     </form>
 

@@ -24,7 +24,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/tulisresep/{users:id}', [ResepController::class, 'create']);
-Route::post('/tulisresep/store', [ResepController::class, 'store']);
-
-Route::get('/detail/{reseps:id}', [ResepController::class, 'show']);
+Route::middleware(['auth'])->group(function() {
+    Route::get('/tulisresep/{users:id}', [ResepController::class, 'create']);
+    Route::post('/tulisresep/store', [ResepController::class, 'store']);
+    
+    Route::get('/detail/{reseps:id}', [ResepController::class, 'show']);
+});
