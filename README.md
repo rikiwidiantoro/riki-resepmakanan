@@ -1,9 +1,9 @@
 ## Cara Installasi
 
-1. Download Code di repository ini dan code di link drive ini : ....
-2. Extract semua. Lalu gabungkan code di drive dengan code di repository github
+1. Download Code lengkap pada drive : https://drive.google.com/drive/folders/13pFkN_4gkYqOm-A8H7MF3lhExw6JHpec?usp=sharing
+2. Lalu Extract file zip
 3. Jika tidak menggunakan valet, ubah "APP_URL" pada file .env dengan localhost atau server lokal
-3. Buat database sesuai nama di file .sql lalu import file .sql yang sebelumnya yg ada di drive. pastikan nama file nya sama dengan nama "DB_DATABASE" pada file .env
+3. Download file .sql pada drive. lalu buat database sesuai nama di file .sql kemudian import file .sql yang sebelumnya yg ada di drive. pastikan nama file nya sama dengan nama "DB_DATABASE" pada file .env
 4. Jika data pada database setelah import tidak muncul maka buka code, lalu buka terminal dan jalankan perintah "php artisan migrate:refresh", kemudian jalankan perintah "php artisan db:seed" => untuk men-generate data default yang telah dibuat dengan seeding & factory
 
 
@@ -18,7 +18,6 @@
 1. User yang sudah login bisa meng-klik tombol suka pada resep, akan tetapi tidak berpengaruh pada jumlah suka (tag suka diatas judul) dan jika di refresh atau berpindah halaman kembali seperti semula. jadi tombol suka hanya fungsionalitas saja dihalaman home
 2. Belum bisa upload image/gambar
 3. Bagian tulis resep, bahan-bahan dan langkah pembuatan belum bisa menggunakan list. jadi hanya menggunakan tag textarea
-4. 
 
 
 ## Dibuat dengan :
